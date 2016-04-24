@@ -9,7 +9,6 @@ package JogoDaForca;
 import javax.swing.JOptionPane;
 import java.io.*;
 import java.text.Normalizer;
-import java.util.Arrays;
 import java.util.Random;
 /**
  *
@@ -17,15 +16,14 @@ import java.util.Random;
  */
 public class Jogo {
     public static void main(String[] args) throws IOException {
-        jogar jogo =new jogar();
-        jogo.jogo(3,1);
+        
     }
 }
 class jogar{
     String[] opcoes = {"Paises", "Marcas Famosas","Carros","Times de Futebol"};
     boolean[] acertos;
     Object resposta;
-    int dificuldade=1,lifes=5;
+    int dificuldade,lifes;
     
     //Função que verifica se o jogador ganhou ou não
     boolean checarVitoria(){
@@ -62,13 +60,12 @@ class jogar{
             
             //Se ele tiver errado perde uma vida.
             if(s){
-                    System.out.println(lifes);
                     lifes--;
             }
             //Reporna uma string de bolleans com as possições acertadas e a palavra
             return palavraatualizada(acertos, palavra);
         }
-        //?????
+        //Caso as vezes a janela não feche e o jogador tente continuar.
         return "Você esta trapaceando?";
     }
     
@@ -105,18 +102,18 @@ class jogar{
         
         //Se dificuldade 1 -> 5 vidas
         if(dif==1){
-            lifes=5;
+            lifes=6;
         }
         //Se dificuldade 2 -> Não tem a dica da palavra e tem 5 vidas
         if(dif==2){
             palavra[1]="Dica não acessivel nessa dificuldade";
-            lifes=5;
+            lifes=4;
         }
         
         //Se dificuldade 3 -> Não tem dica da palavra e tem 3 vidas
         if(dif==3){
             palavra[1]="Dica não acessivel nessa dificuldade";
-            lifes=3;
+            lifes=2;
         }
         
         //Tratamento das palavras
@@ -126,14 +123,6 @@ class jogar{
         //Converte a string em um array do tipo char
         char vet[]=palavra[0].toCharArray();
         
-        //Printa no console a palavra
-        for (int i = 0; i < vet.length; i++) {
-            System.out.print(vet[i]);
-        }
-        
-        //Printa no console as dicas e vidas
-        System.out.println(" Dica: "+palavra[1]);
-        System.out.println(lifes);
         return palavra;
     }
     
@@ -259,7 +248,7 @@ class jogar{
         linhaLer.skip(lerf.length());
         int qtdLinha = linhaLer.getLineNumber();
         Random random = new Random();
-        int num = random.nextInt(qtdLinha)+1;
+        int num = random.nextInt(qtdLinha+1)+1;
         BufferedReader ler=new BufferedReader(new FileReader (lerf));
         String linha = null;
         for (int i = 0; i < num; i++) {

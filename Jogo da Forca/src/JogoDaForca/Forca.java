@@ -24,12 +24,18 @@ public class Forca extends javax.swing.JFrame {
         word.setText(p);
         this.vet=vet;
         this.palavra=palavra;
+        Forca1.setVisible(false);
+        Forca2.setVisible(false);
+        Forca3.setVisible(false);
+        Forca4.setVisible(false);
+        Forca5.setVisible(false);
+        Forca6.setVisible(false);
     }
     jogar jogo;
     char[] vet;
     String dica,palavra;
     char letra;
-    boolean t=false;
+    boolean t=false,j=false;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -83,14 +89,24 @@ public class Forca extends javax.swing.JFrame {
         yes = new javax.swing.JButton();
         word = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        FundoForca = new javax.swing.JLabel();
+        Forca1 = new javax.swing.JLabel();
+        Forca2 = new javax.swing.JLabel();
+        Forca3 = new javax.swing.JLabel();
+        Forca4 = new javax.swing.JLabel();
+        Forca5 = new javax.swing.JLabel();
+        Forca6 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Palavra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PalavraActionPerformed(evt);
             }
         });
+        getContentPane().add(Palavra, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 520, 260, 30));
 
         buttonGroup1.add(A);
         A.setText("A");
@@ -99,6 +115,7 @@ public class Forca extends javax.swing.JFrame {
                 AActionPerformed(evt);
             }
         });
+        getContentPane().add(A, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, -1, -1));
 
         buttonGroup1.add(B);
         B.setText("B");
@@ -107,6 +124,7 @@ public class Forca extends javax.swing.JFrame {
                 BActionPerformed(evt);
             }
         });
+        getContentPane().add(B, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
 
         buttonGroup1.add(C);
         C.setText("C");
@@ -115,6 +133,7 @@ public class Forca extends javax.swing.JFrame {
                 CActionPerformed(evt);
             }
         });
+        getContentPane().add(C, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, -1, -1));
 
         buttonGroup1.add(D);
         D.setText("D");
@@ -123,6 +142,7 @@ public class Forca extends javax.swing.JFrame {
                 DActionPerformed(evt);
             }
         });
+        getContentPane().add(D, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, -1, -1));
 
         buttonGroup1.add(E);
         E.setText("E");
@@ -131,6 +151,7 @@ public class Forca extends javax.swing.JFrame {
                 EActionPerformed(evt);
             }
         });
+        getContentPane().add(E, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, -1, -1));
 
         buttonGroup1.add(F);
         F.setText("F");
@@ -139,6 +160,7 @@ public class Forca extends javax.swing.JFrame {
                 FActionPerformed(evt);
             }
         });
+        getContentPane().add(F, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, -1, -1));
 
         buttonGroup1.add(G);
         G.setText("G");
@@ -147,6 +169,7 @@ public class Forca extends javax.swing.JFrame {
                 GActionPerformed(evt);
             }
         });
+        getContentPane().add(G, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, -1, -1));
 
         buttonGroup1.add(H);
         H.setText("H");
@@ -155,6 +178,7 @@ public class Forca extends javax.swing.JFrame {
                 HActionPerformed(evt);
             }
         });
+        getContentPane().add(H, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 390, -1, -1));
 
         buttonGroup1.add(I);
         I.setText("I");
@@ -163,6 +187,7 @@ public class Forca extends javax.swing.JFrame {
                 IActionPerformed(evt);
             }
         });
+        getContentPane().add(I, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 390, -1, -1));
 
         buttonGroup1.add(J);
         J.setText("J");
@@ -171,6 +196,7 @@ public class Forca extends javax.swing.JFrame {
                 JActionPerformed(evt);
             }
         });
+        getContentPane().add(J, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 390, -1, -1));
 
         buttonGroup1.add(K);
         K.setText("K");
@@ -179,6 +205,7 @@ public class Forca extends javax.swing.JFrame {
                 KActionPerformed(evt);
             }
         });
+        getContentPane().add(K, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, -1, -1));
 
         buttonGroup1.add(L);
         L.setText("L");
@@ -187,6 +214,7 @@ public class Forca extends javax.swing.JFrame {
                 LActionPerformed(evt);
             }
         });
+        getContentPane().add(L, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 390, -1, -1));
 
         buttonGroup1.add(W);
         W.setText("W");
@@ -195,6 +223,7 @@ public class Forca extends javax.swing.JFrame {
                 WActionPerformed(evt);
             }
         });
+        getContentPane().add(W, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 420, -1, -1));
 
         buttonGroup1.add(M);
         M.setText("M");
@@ -203,6 +232,7 @@ public class Forca extends javax.swing.JFrame {
                 MActionPerformed(evt);
             }
         });
+        getContentPane().add(M, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, -1, -1));
 
         buttonGroup1.add(N);
         N.setText("N");
@@ -211,6 +241,7 @@ public class Forca extends javax.swing.JFrame {
                 NActionPerformed(evt);
             }
         });
+        getContentPane().add(N, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, -1, -1));
 
         buttonGroup1.add(O);
         O.setText("O");
@@ -219,6 +250,7 @@ public class Forca extends javax.swing.JFrame {
                 OActionPerformed(evt);
             }
         });
+        getContentPane().add(O, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 420, -1, -1));
 
         buttonGroup1.add(P);
         P.setText("P");
@@ -227,6 +259,7 @@ public class Forca extends javax.swing.JFrame {
                 PActionPerformed(evt);
             }
         });
+        getContentPane().add(P, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, -1));
 
         buttonGroup1.add(Q);
         Q.setText("Q");
@@ -235,6 +268,7 @@ public class Forca extends javax.swing.JFrame {
                 QActionPerformed(evt);
             }
         });
+        getContentPane().add(Q, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 420, -1, -1));
 
         buttonGroup1.add(R);
         R.setText("R");
@@ -243,6 +277,7 @@ public class Forca extends javax.swing.JFrame {
                 RActionPerformed(evt);
             }
         });
+        getContentPane().add(R, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, -1, -1));
 
         buttonGroup1.add(S);
         S.setText("S");
@@ -251,6 +286,7 @@ public class Forca extends javax.swing.JFrame {
                 SActionPerformed(evt);
             }
         });
+        getContentPane().add(S, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, -1, -1));
 
         buttonGroup1.add(T);
         T.setText("T");
@@ -259,6 +295,7 @@ public class Forca extends javax.swing.JFrame {
                 TActionPerformed(evt);
             }
         });
+        getContentPane().add(T, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, -1, -1));
 
         buttonGroup1.add(U);
         U.setText("U");
@@ -267,6 +304,7 @@ public class Forca extends javax.swing.JFrame {
                 UActionPerformed(evt);
             }
         });
+        getContentPane().add(U, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, -1, -1));
 
         buttonGroup1.add(V);
         V.setText("V");
@@ -275,6 +313,7 @@ public class Forca extends javax.swing.JFrame {
                 VActionPerformed(evt);
             }
         });
+        getContentPane().add(V, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, -1, -1));
 
         buttonGroup1.add(X);
         X.setText("X");
@@ -283,6 +322,7 @@ public class Forca extends javax.swing.JFrame {
                 XActionPerformed(evt);
             }
         });
+        getContentPane().add(X, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, -1, -1));
 
         buttonGroup1.add(nove);
         nove.setText("9");
@@ -291,6 +331,7 @@ public class Forca extends javax.swing.JFrame {
                 noveActionPerformed(evt);
             }
         });
+        getContentPane().add(nove, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, -1, -1));
 
         buttonGroup1.add(Y);
         Y.setText("Y");
@@ -299,6 +340,7 @@ public class Forca extends javax.swing.JFrame {
                 YActionPerformed(evt);
             }
         });
+        getContentPane().add(Y, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, -1, -1));
 
         buttonGroup1.add(Z);
         Z.setText("Z");
@@ -307,6 +349,7 @@ public class Forca extends javax.swing.JFrame {
                 ZActionPerformed(evt);
             }
         });
+        getContentPane().add(Z, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, -1, -1));
 
         buttonGroup1.add(zero);
         zero.setText("0");
@@ -315,6 +358,7 @@ public class Forca extends javax.swing.JFrame {
                 zeroActionPerformed(evt);
             }
         });
+        getContentPane().add(zero, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, -1, -1));
 
         buttonGroup1.add(um);
         um.setText("1");
@@ -323,6 +367,7 @@ public class Forca extends javax.swing.JFrame {
                 umActionPerformed(evt);
             }
         });
+        getContentPane().add(um, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, -1, -1));
 
         buttonGroup1.add(dois);
         dois.setText("2");
@@ -331,6 +376,7 @@ public class Forca extends javax.swing.JFrame {
                 doisActionPerformed(evt);
             }
         });
+        getContentPane().add(dois, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 450, -1, -1));
 
         buttonGroup1.add(tres);
         tres.setText("3");
@@ -339,6 +385,7 @@ public class Forca extends javax.swing.JFrame {
                 tresActionPerformed(evt);
             }
         });
+        getContentPane().add(tres, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 450, -1, -1));
 
         buttonGroup1.add(quatro);
         quatro.setText("4");
@@ -347,6 +394,7 @@ public class Forca extends javax.swing.JFrame {
                 quatroActionPerformed(evt);
             }
         });
+        getContentPane().add(quatro, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 450, -1, -1));
 
         buttonGroup1.add(cinco);
         cinco.setText("5");
@@ -355,6 +403,7 @@ public class Forca extends javax.swing.JFrame {
                 cincoActionPerformed(evt);
             }
         });
+        getContentPane().add(cinco, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 450, -1, -1));
 
         buttonGroup1.add(seis);
         seis.setText("6");
@@ -363,6 +412,7 @@ public class Forca extends javax.swing.JFrame {
                 seisActionPerformed(evt);
             }
         });
+        getContentPane().add(seis, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 450, -1, -1));
 
         buttonGroup1.add(sete);
         sete.setText("7");
@@ -371,6 +421,7 @@ public class Forca extends javax.swing.JFrame {
                 seteActionPerformed(evt);
             }
         });
+        getContentPane().add(sete, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 450, -1, -1));
 
         buttonGroup1.add(oito);
         oito.setText("8");
@@ -379,8 +430,10 @@ public class Forca extends javax.swing.JFrame {
                 oitoActionPerformed(evt);
             }
         });
+        getContentPane().add(oito, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 450, -1, -1));
 
         jLabel1.setText("Dica:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 40));
 
         hint.setEditable(false);
         hint.addActionListener(new java.awt.event.ActionListener() {
@@ -388,8 +441,10 @@ public class Forca extends javax.swing.JFrame {
                 hintActionPerformed(evt);
             }
         });
+        getContentPane().add(hint, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 539, -1));
 
         jLabel2.setText("Já Sabe? Pode arriscar aqui ->");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 530, -1, -1));
 
         yes.setText("Confima a letra?");
         yes.setEnabled(false);
@@ -398,6 +453,7 @@ public class Forca extends javax.swing.JFrame {
                 yesActionPerformed(evt);
             }
         });
+        getContentPane().add(yes, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, -1, -1));
 
         word.setEditable(false);
         word.addActionListener(new java.awt.event.ActionListener() {
@@ -405,176 +461,31 @@ public class Forca extends javax.swing.JFrame {
                 wordActionPerformed(evt);
             }
         });
+        getContentPane().add(word, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 532, -1));
 
         jLabel3.setText("Palavra:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(A)
-                                .addGap(18, 18, 18)
-                                .addComponent(B)
-                                .addGap(18, 18, 18)
-                                .addComponent(C)
-                                .addGap(18, 18, 18)
-                                .addComponent(D)
-                                .addGap(18, 18, 18)
-                                .addComponent(E))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(M)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(N)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(O)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(P))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Y)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Z)
-                                        .addGap(18, 18, Short.MAX_VALUE)
-                                        .addComponent(zero)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(um)))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(dois)
-                                    .addComponent(Q))))
-                        .addGap(18, 18, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(F)
-                                .addGap(18, 18, 18)
-                                .addComponent(G)
-                                .addGap(18, 18, 18)
-                                .addComponent(H)
-                                .addGap(18, 18, 18)
-                                .addComponent(I)
-                                .addGap(18, 18, 18)
-                                .addComponent(J)
-                                .addGap(18, 18, 18)
-                                .addComponent(K)
-                                .addGap(18, 18, 18)
-                                .addComponent(L))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(tres)
-                                .addGap(18, 18, 18)
-                                .addComponent(quatro)
-                                .addGap(18, 18, 18)
-                                .addComponent(cinco)
-                                .addGap(18, 18, 18)
-                                .addComponent(seis)
-                                .addGap(18, 18, 18)
-                                .addComponent(sete)
-                                .addGap(18, 18, 18)
-                                .addComponent(oito)
-                                .addGap(18, 18, 18)
-                                .addComponent(nove))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(R)
-                                .addGap(18, 18, 18)
-                                .addComponent(S)
-                                .addGap(18, 18, 18)
-                                .addComponent(T)
-                                .addGap(18, 18, 18)
-                                .addComponent(U)
-                                .addGap(18, 18, 18)
-                                .addComponent(V)
-                                .addGap(18, 18, 18)
-                                .addComponent(X)
-                                .addGap(18, 18, 18)
-                                .addComponent(W))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(hint))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(word)))
-                        .addContainerGap())))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(248, 248, 248)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(Palavra, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(yes))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hint, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(word, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(A)
-                    .addComponent(B)
-                    .addComponent(C)
-                    .addComponent(D)
-                    .addComponent(I)
-                    .addComponent(J)
-                    .addComponent(K)
-                    .addComponent(L)
-                    .addComponent(H)
-                    .addComponent(G)
-                    .addComponent(F)
-                    .addComponent(E))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(M)
-                    .addComponent(N)
-                    .addComponent(O)
-                    .addComponent(P)
-                    .addComponent(U)
-                    .addComponent(V)
-                    .addComponent(X)
-                    .addComponent(W)
-                    .addComponent(T)
-                    .addComponent(S)
-                    .addComponent(R)
-                    .addComponent(Q))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Y)
-                    .addComponent(Z)
-                    .addComponent(zero)
-                    .addComponent(um)
-                    .addComponent(seis)
-                    .addComponent(sete)
-                    .addComponent(oito)
-                    .addComponent(nove)
-                    .addComponent(cinco)
-                    .addComponent(quatro)
-                    .addComponent(tres)
-                    .addComponent(dois))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(yes)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Palavra, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(35, 35, 35))
-        );
+        FundoForca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/JogoDaForca/Imagens/ForcaFundo.jpg"))); // NOI18N
+        getContentPane().add(FundoForca, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        Forca1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/JogoDaForca/Imagens/Forca1.jpg"))); // NOI18N
+        getContentPane().add(Forca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        Forca2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/JogoDaForca/Imagens/Forca2.jpg"))); // NOI18N
+        getContentPane().add(Forca2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        Forca3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/JogoDaForca/Imagens/Forca3.jpg"))); // NOI18N
+        getContentPane().add(Forca3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        Forca4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/JogoDaForca/Imagens/Forca4.jpg"))); // NOI18N
+        getContentPane().add(Forca4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        Forca5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/JogoDaForca/Imagens/Forca5.jpg"))); // NOI18N
+        getContentPane().add(Forca5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        Forca6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/JogoDaForca/Imagens/Forca6.jpg"))); // NOI18N
+        getContentPane().add(Forca6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -583,14 +494,15 @@ public class Forca extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (Palavra.getText().equals(palavra)){
             word.setText(palavra);
-            t=true;
+            j=true;
             yes.setEnabled(true);
             yes.doClick();
         }
         else{
-            jogo.lifes--;
-            System.out.println(Palavra.getText());
-            System.out.println(jogo.lifes);
+            letra='%';
+            t=true;
+            yes.setEnabled(true);
+            yes.doClick();
         }
     }//GEN-LAST:event_PalavraActionPerformed
 
@@ -822,20 +734,79 @@ public class Forca extends javax.swing.JFrame {
     private void yesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesActionPerformed
         // TODO add your handling code here:
         boolean m=false;
-        if (!t){
+        if (!j && !t){
              buttonGroup1.getSelection().setEnabled(false);
              word.setText(jogo.jogando(letra, vet));
         }
-        yes.setEnabled(false);
-        if (jogo.lifes==0){
-            this.setVisible(false);
-            JOptionPane.showMessageDialog(null,"A palavra era: "+palavra,"Você Perdeu :( ",0);
-            int v=JOptionPane.showConfirmDialog(null,"Deseja tentar novamente ?", "", 0, 1);
-            if(v==0){
-                m=true;
-            }
+        if (t) {
+            word.setText(jogo.jogando(letra,vet));
+            t=false;
         }
-        if(jogo.checarVitoria()|| m || t){
+        yes.setEnabled(false);
+        if (jogo.lifes==5) {
+                    FundoForca.setVisible(false);
+                    Forca1.setVisible(true);
+                    Forca2.setVisible(false);
+                    Forca3.setVisible(false);
+                    Forca4.setVisible(false);
+                    Forca5.setVisible(false);
+                    Forca6.setVisible(false);
+            }else if(jogo.lifes==4) {
+                    FundoForca.setVisible(false);
+                    Forca1.setVisible(false);
+                    Forca2.setVisible(true);
+                    Forca3.setVisible(false);
+                    Forca4.setVisible(false);
+                    Forca5.setVisible(false);
+                    Forca6.setVisible(false);
+            }else if(jogo.lifes==3){
+                
+                    FundoForca.setVisible(false);
+                    Forca1.setVisible(false);
+                    Forca2.setVisible(false);
+                    Forca3.setVisible(true);
+                    Forca4.setVisible(false);
+                    Forca5.setVisible(false);
+                    Forca6.setVisible(false);
+                
+            }else if(jogo.lifes==2){
+                
+                    FundoForca.setVisible(false);
+                    Forca1.setVisible(false);
+                    Forca2.setVisible(false);
+                    Forca3.setVisible(false);
+                    Forca4.setVisible(true);
+                    Forca5.setVisible(false);
+                    Forca6.setVisible(false);
+                    
+            }else if(jogo.lifes==1) {
+                
+                    FundoForca.setVisible(false);
+                    Forca1.setVisible(false);
+                    Forca2.setVisible(false);
+                    Forca3.setVisible(false);
+                    Forca4.setVisible(false);
+                    Forca5.setVisible(true);
+                    Forca6.setVisible(false);
+                
+            
+            }else if (jogo.lifes==0){
+                yes.setEnabled(false);
+                Palavra.setEnabled(false);
+                FundoForca.setVisible(false);
+                Forca1.setVisible(false);
+                Forca2.setVisible(false);
+                Forca3.setVisible(false);
+                Forca4.setVisible(false);
+                Forca5.setVisible(false);
+                Forca6.setVisible(true);
+                JOptionPane.showMessageDialog(null,"A palavra era: "+palavra,"Você Perdeu :( ",0);
+                int v=JOptionPane.showConfirmDialog(null,"Deseja tentar novamente ?", "", 0, 1);
+                if(v==0){
+                    m=true;
+                }
+            }
+        if(jogo.checarVitoria()|| m || j){
             int c=1;
             if(m){
                 c=0;
@@ -921,6 +892,13 @@ public class Forca extends javax.swing.JFrame {
     private javax.swing.JRadioButton D;
     private javax.swing.JRadioButton E;
     private javax.swing.JRadioButton F;
+    private javax.swing.JLabel Forca1;
+    private javax.swing.JLabel Forca2;
+    private javax.swing.JLabel Forca3;
+    private javax.swing.JLabel Forca4;
+    private javax.swing.JLabel Forca5;
+    private javax.swing.JLabel Forca6;
+    private javax.swing.JLabel FundoForca;
     private javax.swing.JRadioButton G;
     private javax.swing.JRadioButton H;
     private javax.swing.JRadioButton I;

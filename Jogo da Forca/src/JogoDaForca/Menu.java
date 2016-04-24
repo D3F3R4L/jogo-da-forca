@@ -51,9 +51,14 @@ public class Menu extends javax.swing.JFrame {
         Easy = new javax.swing.JRadioButton();
         Medio = new javax.swing.JRadioButton();
         Hard = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Paises.setBackground(new java.awt.Color(204, 204, 204));
+        Paises.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Paises.setText("Paises");
         Paises.setEnabled(false);
         Paises.addActionListener(new java.awt.event.ActionListener() {
@@ -61,7 +66,10 @@ public class Menu extends javax.swing.JFrame {
                 PaisesActionPerformed(evt);
             }
         });
+        getContentPane().add(Paises, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, -1, 30));
 
+        Marcas.setBackground(new java.awt.Color(204, 204, 204));
+        Marcas.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Marcas.setText("Marcas Famosas");
         Marcas.setEnabled(false);
         Marcas.addActionListener(new java.awt.event.ActionListener() {
@@ -69,7 +77,10 @@ public class Menu extends javax.swing.JFrame {
                 MarcasActionPerformed(evt);
             }
         });
+        getContentPane().add(Marcas, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, -1, 30));
 
+        Todos.setBackground(new java.awt.Color(204, 204, 204));
+        Todos.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Todos.setText("Todos");
         Todos.setEnabled(false);
         Todos.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +88,10 @@ public class Menu extends javax.swing.JFrame {
                 TodosActionPerformed(evt);
             }
         });
+        getContentPane().add(Todos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, -1, 30));
 
+        Carros.setBackground(new java.awt.Color(204, 204, 204));
+        Carros.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Carros.setText("Carros");
         Carros.setEnabled(false);
         Carros.addActionListener(new java.awt.event.ActionListener() {
@@ -85,8 +99,11 @@ public class Menu extends javax.swing.JFrame {
                 CarrosActionPerformed(evt);
             }
         });
+        getContentPane().add(Carros, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, -1, 30));
 
+        Times.setBackground(new java.awt.Color(204, 204, 204));
         buttonGroup2.add(Times);
+        Times.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Times.setText("Times de Futebol");
         Times.setEnabled(false);
         Times.addActionListener(new java.awt.event.ActionListener() {
@@ -94,14 +111,20 @@ public class Menu extends javax.swing.JFrame {
                 TimesActionPerformed(evt);
             }
         });
+        getContentPane().add(Times, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 350, -1, 30));
 
+        criarpalavra.setBackground(new java.awt.Color(204, 204, 204));
+        criarpalavra.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         criarpalavra.setText("Adicionar Palavra");
         criarpalavra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 criarpalavraActionPerformed(evt);
             }
         });
+        getContentPane().add(criarpalavra, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 180, 50));
 
+        Jogar.setBackground(new java.awt.Color(204, 204, 204));
+        Jogar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Jogar.setText("Jogar");
         Jogar.setEnabled(false);
         Jogar.addActionListener(new java.awt.event.ActionListener() {
@@ -109,101 +132,53 @@ public class Menu extends javax.swing.JFrame {
                 JogarActionPerformed(evt);
             }
         });
+        getContentPane().add(Jogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 470, 110, 60));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Classes das palavras");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 220, 20));
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Dificuldade");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, -1, 20));
 
+        Easy.setBackground(new java.awt.Color(204, 204, 204));
         buttonGroup1.add(Easy);
+        Easy.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Easy.setText("Facil");
         Easy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EasyActionPerformed(evt);
             }
         });
+        getContentPane().add(Easy, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, 30));
 
+        Medio.setBackground(new java.awt.Color(204, 204, 204));
         buttonGroup1.add(Medio);
+        Medio.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Medio.setText("Medio");
         Medio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MedioActionPerformed(evt);
             }
         });
+        getContentPane().add(Medio, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, -1, 30));
 
+        Hard.setBackground(new java.awt.Color(204, 204, 204));
         buttonGroup1.add(Hard);
+        Hard.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Hard.setText("Dificil");
         Hard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HardActionPerformed(evt);
             }
         });
+        getContentPane().add(Hard, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, -1, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(246, 246, 246)
-                        .addComponent(Jogar, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(170, 170, 170)
-                                .addComponent(Easy)
-                                .addGap(34, 34, 34)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addComponent(jLabel2))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Medio)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(Hard))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(70, 70, 70)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Todos)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Paises)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Marcas)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Carros)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                        .addComponent(Times)))
-                .addContainerGap(49, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(criarpalavra)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(criarpalavra)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Easy)
-                    .addComponent(Medio)
-                    .addComponent(Hard))
-                .addGap(36, 36, 36)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Paises)
-                    .addComponent(Marcas)
-                    .addComponent(Carros)
-                    .addComponent(Times)
-                    .addComponent(Todos))
-                .addGap(13, 13, 13)
-                .addComponent(Jogar)
-                .addContainerGap())
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/JogoDaForca/Imagens/fundo.jpg"))); // NOI18N
+        jLabel3.setToolTipText("");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -357,5 +332,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton criarpalavra;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
