@@ -35,3 +35,11 @@ Red Bull dica te dar assas
 SEGA dica Sonic
 Xerox dica inventou o mouse
 Yahoo dica Tem o provedor de email chamado ymail.
+Mercedes-Benz dica Fabricante de carros
+Mc-Laren dica Fabricante de carros
+Land Rover dica Fabricante
+Volvo dica Fabricante de carros sueca.
+Ferrari dica Tem um cavalo na logo
+Audi dica Fabricante de carros
+Porsche dica Fabricante de carros alemã
+Lamborghini dica Fabricante de carros italiana
