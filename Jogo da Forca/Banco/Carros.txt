@@ -1,2 +1,7 @@
 Mercedes-Benz dica Fabricante
 Mc-Laren dica Fabricante
+Land Rover dica Fabricante
+Volvo dica Fabricante
+Ferrari dica Tem um cavolo na logo
+Audi dica Fabricante
+Porsche dica Fabricante
