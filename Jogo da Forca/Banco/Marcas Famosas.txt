@@ -1,92 +1,37 @@
 Dell dica Informatica
 Subaru dica Automobilistica
-Adidas
 American Express
-Apple
-AT&T
-Audi
-BlackBerry
-BMW
-BP
-Burger King
-Cadillac
-Canon
-Catterpillar
-CBS
-Cisco
-CNN
-Coca Cola
-Colgate
-Converse
-Disney
-Disneyland
-Dodge
-eBay
-Ford
-Fox
-Fox News
-General Electric
-General Motors
-Gillette
-Google
-Gucci
-Guess
-Hewlett-Packard
-Honda
-Hyatt
-IBM
-IKEA
-Intel
-Jeep
-JPMorgan
-Kelloggs
-KFC
-LG
-Lincoln
-Loreal
-Marlboro
-McDonald’s
-Mercedes
-Microsoft
-MTV
-Nascar
-NBA
-NBC
-Nescafe
-Nestle
-Netflix
-NFL
-Nike
-Nintendo
-Nissan
-Nokia
-Oracle
-Panasonic
-Pepsi
-Philips
-Pizza Hut
-Porsche
-Red Bull
-Rolex
-Samsung
-Saturn
-Sears
-SEGA
-Sharp
-Sirius
-Sony
-Subaru
-Subway
-Suzuki
-T-Mobile
-Target
-Toyota
-Turner
-Verizon
-Victoria’s Secret
-Visa
-Volkswagen
-Walmart
-Walt Disney World
-Xerox
-Yahoo
+Apple dica Maça
+BlackBerry dica Fabricante de celular
+BMW dica Fabricante de carros
+Burger King dica Imperio alimenticio
+Canon dica Ajuda a registrar momentos
+Coca Cola dica Ja foi considerado remédio
+Colgate dica Proteje os dentes
+Disney dica Fantasia
+eBay dica Compras
+Fox News dica Noticias
+General Motors dica Produz motores, carros e baterias.
+Google dica Mãe dos burros
+IBM dica Concorrente da intel
+Intel dica Lei de Moore
+Jeep dica Carros de aventuras
+KFC dica Obesidade
+LG dica Celulares
+McDonald’s dica Ataques cardiacos
+Microsoft dica Quero trabalhar aqui.
+MTV dica Programa
+Nascar dica Corrida
+NBA dica Basquete
+Nescafe dica Café
+Netflix dica Concorrente do porcorne
+Nintendo dica Mario
+Nokia dica Celulares indestrutiveis
+Oracle dica Estou rodando por cima.
+Panasonic dica Ideas for life
+Pepsi dica Quero ser uma coca
+Pizza Hut dica pizza quente
+Red Bull dica te dar assas
+SEGA dica Sonic
+Xerox dica inventou o mouse
+Yahoo dica Tem o provedor de email chamado ymail.
