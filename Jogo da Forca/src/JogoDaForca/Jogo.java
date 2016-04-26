@@ -119,7 +119,6 @@ class jogar{
         //Tratamento das palavras
         palavra[0]=palavra[0].toLowerCase(); // deixa a palavra com caixa baixa
         palavra[0]=Normalizer.normalize(palavra[0],Normalizer.Form.NFD); // retira os acentos da palavra
-        
         //Converte a string em um array do tipo char
         char vet[]=palavra[0].toCharArray();
         

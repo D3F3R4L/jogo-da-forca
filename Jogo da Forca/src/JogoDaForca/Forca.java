@@ -444,7 +444,7 @@ public class Forca extends javax.swing.JFrame {
         getContentPane().add(hint, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 539, -1));
 
         jLabel2.setText("Já Sabe? Pode arriscar aqui ->");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 530, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 530, -1, -1));
 
         yes.setText("Confima a letra?");
         yes.setEnabled(false);

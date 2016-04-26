@@ -115,7 +115,7 @@ public class Menu extends javax.swing.JFrame {
 
         criarpalavra.setBackground(new java.awt.Color(204, 204, 204));
         criarpalavra.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        criarpalavra.setText("Adicionar Palavra");
+        criarpalavra.setText("Adicionar Nova Palavra");
         criarpalavra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 criarpalavraActionPerformed(evt);
